@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="NorthPeak Digital — AI Automation & Intelligent Business Solutions. Automate repetitive work, cut costs, and accelerate growth with custom AI workflows, agents, and intelligent software." />
+  <meta name="keywords" content="AI automation, workflow automation, AI chatbots, AI agents, business automation, intelligent software" />
+  <meta property="og:title" content="NorthPeak Digital — Automate Smarter. Grow Faster." />
+  <meta property="og:description" content="Custom AI automation solutions that eliminate manual work and accelerate business growth." />
+  <title>NorthPeak Digital — Automate Smarter. Grow Faster.</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NEURAL NETWORK CANVAS BACKGROUND -->
+  <canvas id="neural-canvas" aria-hidden="true"></canvas>
+
+  <!-- CUSTOM CURSOR -->
+  <div class="cursor-dot" id="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursor-ring" aria-hidden="true"></div>
+
+  <!-- ═══════════════ NAVIGATION ═══════════════ -->
+  <nav class="nav" id="main-nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner container">
+      <a href="#hero" class="nav-brand" aria-label="NorthPeak Digital — Home">
+        <div class="brand-icon-wrap" aria-hidden="true">
+          <svg viewBox="0 0 36 36" fill="none" width="36" height="36">
+            <circle cx="18" cy="18" r="7" fill="url(#ng)" />
+            <circle cx="6"  cy="10" r="3.5" fill="url(#ng)" opacity=".5"/>
+            <circle cx="30" cy="10" r="3.5" fill="url(#ng)" opacity=".5"/>
+            <circle cx="6"  cy="26" r="3.5" fill="url(#ng)" opacity=".5"/>
+            <circle cx="30" cy="26" r="3.5" fill="url(#ng)" opacity=".5"/>
+            <line x1="18" y1="11" x2="8"  y2="12" stroke="#00C8FF" stroke-width="1.5" opacity=".6"/>
+            <line x1="18" y1="11" x2="28" y2="12" stroke="#00C8FF" stroke-width="1.5" opacity=".6"/>
+            <line x1="18" y1="25" x2="8"  y2="24" stroke="#00C8FF" stroke-width="1.5" opacity=".6"/>
+            <line x1="18" y1="25" x2="28" y2="24" stroke="#00C8FF" stroke-width="1.5" opacity=".6"/>
+            <defs>
+              <linearGradient id="ng" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#00C8FF"/>
+                <stop offset="100%" stop-color="#7C3AED"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <span class="brand-text">NorthPeak<span class="brand-ai">Digital</span></span>
+      </a>
+
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="#services"      class="nav-link">Services</a></li>
+        <li><a href="#how-it-works"  class="nav-link">Process</a></li>
+        <li><a href="#industries"    class="nav-link">Industries</a></li>
+        <li><a href="#pricing"       class="nav-link">Pricing</a></li>
+        <li><a href="#roi-calculator" class="nav-link">ROI Calc</a></li>
+        <li><a href="#contact"       class="nav-link nav-cta-link">Get Started</a></li>
+      </ul>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══════════════ HERO ═══════════════ -->
+  <section class="hero" id="hero" aria-label="Hero — NorthPeak Digital">
+    <div class="hero-circuit-overlay" aria-hidden="true"></div>
+
+    <div class="container hero-content">
+
+      <h1 class="hero-h1">
+        Put your business on<br/>
+        <span class="h1-gradient">AI Autopilot</span>
+      </h1>
+
+      <p class="hero-typewriter">
+        We automate <span id="typewriter-word" class="tw-word">customer support</span> so you don't have to.
+      </p>
+
+      <p class="hero-sub">
+        Custom AI workflows, intelligent agents, and automation pipelines that eliminate manual work,
+        cut operational costs, and unlock exponential growth — in weeks, not months.
+      </p>
+
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-primary" id="hero-cta-primary">
+          Start Automating
+          <svg viewBox="0 0 20 20" fill="currentColor" width="18" height="18"><path d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"/></svg>
+        </a>
+        <a href="#how-it-works" class="btn btn-ghost" id="hero-cta-secondary">
+          <svg viewBox="0 0 20 20" fill="currentColor" width="18" height="18"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/></svg>
+          See How It Works
+        </a>
+      </div>
+
+      <div class="hero-pills" aria-label="Key statistics">
+        <div class="stat-pill sp-1">
+          <span>⚡</span>
+          <div><b>80%</b><small>Less Manual Work</small></div>
+        </div>
+        <div class="stat-pill sp-2">
+          <span>🤖</span>
+          <div><b>500+</b><small>Workflows Built</small></div>
+        </div>
+        <div class="stat-pill sp-3">
+          <span>💰</span>
+          <div><b>3× ROI</b><small>Avg in 90 Days</small></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll" aria-hidden="true">
+      <div class="scroll-wheel"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ METRICS STRIP ═══════════════ -->
+  <section class="metrics-strip" id="metrics" aria-label="Key performance metrics">
+    <div class="container metrics-grid">
+      <div class="metric-item">
+        <div class="metric-num" id="m0" data-target="500" data-suffix="+">0</div>
+        <div class="metric-lbl">Workflows Automated</div>
+      </div>
+      <div class="metric-item">
+        <div class="metric-num" id="m1" data-target="80" data-suffix="%">0</div>
+        <div class="metric-lbl">Manual Task Reduction</div>
+      </div>
+      <div class="metric-item">
+        <div class="metric-num" id="m2" data-target="120" data-suffix="+">0</div>
+        <div class="metric-lbl">Happy Clients</div>
+      </div>
+      <div class="metric-item">
+        <div class="metric-num" id="m3" data-target="49" data-suffix="" data-decimal="true">0</div>
+        <div class="metric-lbl">Average Rating ⭐</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ SERVICES (6 cards, flip) ═══════════════ -->
+  <section class="services" id="services" aria-labelledby="svc-h">
+    <div class="container">
+      <header class="section-header">
+        <span class="section-tag">What We Build</span>
+        <h2 class="section-title" id="svc-h">AI-Powered Services That <span class="tg">Actually Work</span></h2>
+        <p class="section-sub">End-to-end automation — from discovery to deployment — designed for measurable business impact.</p>
+      </header>
+
+      <div class="services-grid">
+
+        <!-- 1 AI Chatbots -->
+        <article class="svc-card" id="svc-chatbots" tabindex="0" aria-label="AI Chatbots service">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="svc-icon si-blue">🤖</div>
+              <h3>AI Chatbots</h3>
+              <p>Deploy intelligent chatbots for websites, WhatsApp, and social media providing instant 24/7 customer support.</p>
+              <span class="flip-hint">Hover to explore ↗</span>
+            </div>
+            <div class="card-back">
+              <h3>AI Chatbots</h3>
+              <ul>
+                <li>✓ Web, WhatsApp, Telegram, Instagram</li>
+                <li>✓ GPT-4o powered natural language</li>
+                <li>✓ Seamless human agent handoff</li>
+                <li>✓ Custom training on your data</li>
+                <li>✓ Analytics & conversation insights</li>
+              </ul>
+              <a href="#contact" class="back-cta">Get a Chatbot →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2 Workflow Automation -->
+        <article class="svc-card" id="svc-workflow" tabindex="0" aria-label="Workflow Automation service">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="svc-icon si-violet">⚙️</div>
+              <h3>Workflow Automation</h3>
+              <p>Automate repetitive processes by connecting apps, databases, CRMs, and internal systems without code.</p>
+              <span class="flip-hint">Hover to explore ↗</span>
+            </div>
+            <div class="card-back">
+              <h3>Workflow Automation</h3>
+              <ul>
+                <li>✓ Zapier, Make.com, n8n, custom</li>
+                <li>✓ CRM, ERP, database sync</li>
+                <li>✓ Error handling & auto-retry</li>
+                <li>✓ Real-time monitoring dashboards</li>
+                <li>✓ Trigger-based & scheduled flows</li>
+              </ul>
+              <a href="#contact" class="back-cta">Automate Workflows →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3 AI Agents (Featured) -->
+        <article class="svc-card svc-featured" id="svc-agents" tabindex="0" aria-label="AI Agents service — most popular">
+          <div class="card-inner">
+            <div class="card-front">
+              <span class="svc-popular-badge">⭐ Most Popular</span>
+              <div class="svc-icon si-green">🧠</div>
+              <h3>AI Agents</h3>
+              <p>Autonomous AI agents that research, analyze, plan, and execute complex business tasks with minimal human input.</p>
+              <span class="flip-hint">Hover to explore ↗</span>
+            </div>
+            <div class="card-back">
+              <h3>AI Agents</h3>
+              <ul>
+                <li>✓ LangChain, AutoGen, CrewAI</li>
+                <li>✓ Multi-agent orchestration</li>
+                <li>✓ Tool use: browse, code, search</li>
+                <li>✓ Long-term memory & context</li>
+                <li>✓ Human-in-the-loop approval gates</li>
+              </ul>
+              <a href="#contact" class="back-cta">Build an Agent →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4 Email Automation -->
+        <article class="svc-card" id="svc-email" tabindex="0" aria-label="Email Automation service">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="svc-icon si-blue">📧</div>
+              <h3>Email Automation</h3>
+              <p>Automate lead nurturing, onboarding sequences, follow-ups, newsletters and marketing at scale.</p>
+              <span class="flip-hint">Hover to explore ↗</span>
+            </div>
+            <div class="card-back">
+              <h3>Email Automation</h3>
+              <ul>
+                <li>✓ Smart segmentation & triggers</li>
+                <li>✓ AI-personalized email copy</li>
+                <li>✓ Drip sequence builder</li>
+                <li>✓ A/B testing & open-rate analytics</li>
+                <li>✓ CRM-synced contact management</li>
+              </ul>
+              <a href="#contact" class="back-cta">Automate Emails →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 5 Document Processing -->
+        <article class="svc-card" id="svc-docs" tabindex="0" aria-label="Intelligent Document Processing service">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="svc-icon si-violet">📄</div>
+              <h3>Document Processing</h3>
+              <p>Extract, classify, summarize and validate data from invoices, contracts, resumes, PDFs and forms automatically.</p>
+              <span class="flip-hint">Hover to explore ↗</span>
+            </div>
+            <div class="card-back">
+              <h3>Document Processing</h3>
+              <ul>
+                <li>✓ OCR + AI extraction pipeline</li>
+                <li>✓ Invoice & contract parsing</li>
+                <li>✓ Resume screening & scoring</li>
+                <li>✓ Compliance validation rules</li>
+                <li>✓ Auto database population</li>
+              </ul>
+              <a href="#contact" class="back-cta">Process Docs →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 6 AI Analytics -->
+        <article class="svc-card" id="svc-analytics" tabindex="0" aria-label="AI Analytics and Dashboards service">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="svc-icon si-green">📊</div>
+              <h3>AI Analytics</h3>
+              <p>Convert raw business data into actionable insights with real-time dashboards and AI-generated automated reports.</p>
+              <span class="flip-hint">Hover to explore ↗</span>
+            </div>
+            <div class="card-back">
+              <h3>AI Analytics</h3>
+              <ul>
+                <li>✓ Real-time KPI dashboards</li>
+                <li>✓ Predictive trend analysis</li>
+                <li>✓ Natural language data queries</li>
+                <li>✓ Automated scheduled reports</li>
+                <li>✓ Anomaly detection alerts</li>
+              </ul>
+              <a href="#contact" class="back-cta">Get Insights →</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ HOW IT WORKS ═══════════════ -->
+  <section class="how-it-works" id="how-it-works" aria-labelledby="hiw-h">
+    <div class="container">
+      <header class="section-header">
+        <span class="section-tag">Our Process</span>
+        <h2 class="section-title" id="hiw-h">From Idea to <span class="tg">Automation</span> in 3 Steps</h2>
+      </header>
+
+      <div class="process-track">
+        <div class="process-step" id="ps-1">
+          <div class="ps-num">01</div>
+          <div class="ps-icon">🔍</div>
+          <h3>Audit & Discover</h3>
+          <p>We map your workflows, identify automation opportunities, and calculate potential time and cost savings before writing a single line of code.</p>
+          <div class="ps-tags">
+            <span>Workflow Mapping</span><span>ROI Analysis</span><span>Tech Stack Review</span>
+          </div>
+        </div>
+
+        <div class="process-arrow" aria-hidden="true">
+          <svg viewBox="0 0 80 24" fill="none">
+            <path d="M4 12 Q40 4 76 12" stroke="url(#pa)" stroke-width="2" stroke-dasharray="6 4"/>
+            <polygon points="76,8 80,12 76,16" fill="url(#pa)"/>
+            <defs>
+              <linearGradient id="pa" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#00C8FF"/>
+                <stop offset="100%" stop-color="#7C3AED"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div class="flow-dot fd1"></div>
+        </div>
+
+        <div class="process-step" id="ps-2">
+          <div class="ps-num">02</div>
+          <div class="ps-icon">🛠️</div>
+          <h3>Build & Integrate</h3>
+          <p>Our engineers build your custom AI solution, integrate it with your existing tech stack, and run rigorous quality testing before release.</p>
+          <div class="ps-tags">
+            <span>Custom Dev</span><span>API Integration</span><span>QA Testing</span>
+          </div>
+        </div>
+
+        <div class="process-arrow" aria-hidden="true">
+          <svg viewBox="0 0 80 24" fill="none">
+            <path d="M4 12 Q40 20 76 12" stroke="url(#pa2)" stroke-width="2" stroke-dasharray="6 4"/>
+            <polygon points="76,8 80,12 76,16" fill="url(#pa2)"/>
+            <defs>
+              <linearGradient id="pa2" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#7C3AED"/>
+                <stop offset="100%" stop-color="#00FF88"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div class="flow-dot fd2"></div>
+        </div>
+
+        <div class="process-step" id="ps-3">
+          <div class="ps-num">03</div>
+          <div class="ps-icon">🚀</div>
+          <h3>Launch & Optimize</h3>
+          <p>We deploy your automation to production, monitor performance, and continuously optimize for better results every sprint.</p>
+          <div class="ps-tags">
+            <span>Deployment</span><span>Monitoring</span><span>Ongoing Support</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ EXPERTISE GRID ═══════════════ -->
+  <section class="expertise" id="expertise" aria-labelledby="exp-h">
+    <div class="container">
+      <header class="section-header">
+        <span class="section-tag">Full-Stack AI</span>
+        <h2 class="section-title" id="exp-h">Everything AI, <span class="tg">All in One Place</span></h2>
+        <p class="section-sub">Beyond the six core services — our capabilities span the entire AI automation landscape.</p>
+      </header>
+      <div class="expertise-grid">
+        <div class="exp-tag">💬 AI Voice Assistants</div>
+        <div class="exp-tag">🌐 Custom Web Development</div>
+        <div class="exp-tag">📱 Mobile App Development</div>
+        <div class="exp-tag">🔗 API Integration</div>
+        <div class="exp-tag">☁️ Cloud Deployment (AWS/GCP/Azure)</div>
+        <div class="exp-tag">🛒 E-commerce Automation</div>
+        <div class="exp-tag">📈 Lead Generation AI</div>
+        <div class="exp-tag">🧾 CRM Automation</div>
+        <div class="exp-tag">🔍 RAG Knowledge Bases</div>
+        <div class="exp-tag">📅 Appointment Scheduling</div>
+        <div class="exp-tag">🎯 Marketing Automation</div>
+        <div class="exp-tag">📞 Support Ticket Automation</div>
+        <div class="exp-tag">🔐 AI Security Monitoring</div>
+        <div class="exp-tag">🎥 AI Content Generation</div>
+        <div class="exp-tag">🌍 Translation & Localization</div>
+        <div class="exp-tag">📦 Business Process Consulting</div>
+        <div class="exp-tag">🧑‍💼 HR Automation</div>
+        <div class="exp-tag">💰 Finance Automation</div>
+        <div class="exp-tag">🏥 Healthcare AI Solutions</div>
+        <div class="exp-tag">🔄 Data Pipeline Engineering</div>
+        <div class="exp-tag">📋 Automated Report Generation</div>
+        <div class="exp-tag">🧪 A/B Testing Automation</div>
+        <div class="exp-tag">🤝 Contract Intelligence</div>
+        <div class="exp-tag">📦 Inventory Management AI</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ INDUSTRIES ═══════════════ -->
+  <section class="industries" id="industries" aria-labelledby="ind-h">
+    <div class="container">
+      <header class="section-header">
+        <span class="section-tag">Sectors</span>
+        <h2 class="section-title" id="ind-h">Industries We <span class="tg">Serve</span></h2>
+      </header>
+    </div>
+    <div class="industries-outer">
+      <div class="industries-track" id="industries-track" aria-label="Industries served — scroll">
+        <div class="ind-card"><span>🏥</span><p>Healthcare</p></div>
+        <div class="ind-card"><span>🛍️</span><p>Retail & E-commerce</p></div>
+        <div class="ind-card"><span>💳</span><p>Finance</p></div>
+        <div class="ind-card"><span>📚</span><p>Education</p></div>
+        <div class="ind-card"><span>🏠</span><p>Real Estate</p></div>
+        <div class="ind-card"><span>🏭</span><p>Manufacturing</p></div>
+        <div class="ind-card"><span>🚚</span><p>Logistics</p></div>
+        <div class="ind-card"><span>⚖️</span><p>Legal Firms</p></div>
+        <div class="ind-card"><span>🚀</span><p>Startups</p></div>
+        <div class="ind-card"><span>💻</span><p>SaaS Companies</p></div>
+        <div class="ind-card"><span>🏨</span><p>Hospitality</p></div>
+        <div class="ind-card"><span>🏛️</span><p>Government</p></div>
+        <!-- Duplicate for seamless loop -->
+        <div class="ind-card" aria-hidden="true"><span>🏥</span><p>Healthcare</p></div>
+        <div class="ind-card" aria-hidden="true"><span>🛍️</span><p>Retail & E-commerce</p></div>
+        <div class="ind-card" aria-hidden="true"><span>💳</span><p>Finance</p></div>
+        <div class="ind-card" aria-hidden="true"><span>📚</span><p>Education</p></div>
+        <div class="ind-card" aria-hidden="true"><span>🏠</span><p>Real Estate</p></div>
+        <div class="ind-card" aria-hidden="true"><span>🏭</span><p>Manufacturing</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ WHY CHOOSE US ═══════════════ -->
+  <section class="why-us" id="why-us" aria-labelledby="why-h">
+    <div class="container why-us-wrap">
+      <div class="why-content">
+        <header>
+          <span class="section-tag">Why NorthPeak Digital</span>
+          <h2 class="section-title" id="why-h">Built for <span class="tg">Real Results</span></h2>
+          <p class="section-sub">Every automation is measured against real business outcomes — not vanity metrics or demo videos.</p>
+        </header>
+
+        <ul class="why-list" role="list">
+          <li class="why-item"><div class="why-ico">🚀</div><div><strong>Save up to 80% of repetitive work</strong><p>Our clients reclaim hundreds of team-hours monthly with targeted, surgical automation.</p></div></li>
+          <li class="why-item"><div class="why-ico">🤖</div><div><strong>AI solutions tailored to your business</strong><p>No copy-paste templates — every solution is engineered to your exact workflows and data.</p></div></li>
+          <li class="why-item"><div class="why-ico">⚡</div><div><strong>Fast deployment, scalable architecture</strong><p>From kickoff to live automation in as little as 2 weeks. Built on infrastructure that grows with you.</p></div></li>
+          <li class="why-item"><div class="why-ico">🔒</div><div><strong>Secure, privacy-first implementations</strong><p>Enterprise-grade security with on-premise and private cloud options. Your data stays yours.</p></div></li>
+          <li class="why-item"><div class="why-ico">📈</div><div><strong>Measurable productivity improvements</strong><p>Monthly performance reports with before/after metrics that prove exactly what automation delivers.</p></div></li>
+          <li class="why-item"><div class="why-ico">🛠️</div><div><strong>Ongoing support & optimization</strong><p>24/7 monitoring, proactive improvements, and a dedicated team that treats your success as its KPI.</p></div></li>
+        </ul>
+      </div>
+
+      <div class="why-visual" aria-label="Live automation dashboard preview">
+        <div class="ai-terminal">
+          <div class="at-header">
+            <div class="at-dots"><span></span><span></span><span></span></div>
+            <span class="at-title">northpeak_agent.py — Running</span>
+            <span class="at-live">● LIVE</span>
+          </div>
+          <div class="at-body" id="why-terminal">
+            <p class="at-line"><span class="at-prompt">▶</span> Starting NorthPeak automation engine...</p>
+            <p class="at-line at-ok"><span class="at-tick">✓</span> Connected: Salesforce CRM (247 leads loaded)</p>
+            <p class="at-line at-ok"><span class="at-tick">✓</span> Email sequences armed — 18 triggers active</p>
+            <p class="at-line at-pulse"><span class="at-spin">⟳</span> <span id="at-animated"> Processing invoice batch... [62%]</span></p>
+            <p class="at-line"><span class="at-prompt">▶</span> AI agent resolved 14 support tickets</p>
+            <p class="at-line at-ok"><span class="at-tick">✓</span> Workflow complete — 4.1 hrs saved today</p>
+            <p class="at-line at-info"><span class="at-arrow">→</span> Next run scheduled: 06:00 AM</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ PRICING (3 tiers) ═══════════════ -->
+  <section class="pricing" id="pricing" aria-labelledby="price-h">
+    <div class="container">
+      <header class="section-header">
+        <span class="section-tag">Transparent Pricing</span>
+        <h2 class="section-title" id="price-h">Simple Plans, <span class="tg">Serious Results</span></h2>
+        <p class="section-sub">No hidden fees. Cancel anytime. Start seeing ROI within your first 30 days or we work for free.</p>
+      </header>
+
+      <div class="billing-toggle-wrap">
+        <span class="billing-label">Monthly</span>
+        <button class="billing-toggle" id="billing-toggle" role="switch" aria-checked="false" aria-label="Toggle annual billing">
+          <span class="toggle-knob"></span>
+        </button>
+        <span class="billing-label">Annual <span class="save-tag">Save 20%</span></span>
+      </div>
+
+      <div class="pricing-grid">
+
+        <!-- Starter -->
+        <div class="price-card" id="plan-starter">
+          <div class="pc-header">
+            <span class="plan-icon-e">🌱</span>
+            <h3>Starter</h3>
+            <p class="plan-tag">For small teams getting started with AI</p>
+          </div>
+          <div class="pc-price">
+            <span class="pc-curr">$</span>
+            <span class="pc-amt" data-mo="1499" data-yr="1199">1,499</span>
+            <span class="pc-per">/mo</span>
+          </div>
+          <ul class="pc-features">
+            <li><span class="fck">✓</span>1 AI Chatbot (Web + WhatsApp)</li>
+            <li><span class="fck">✓</span>Up to 5 automated workflows</li>
+            <li><span class="fck">✓</span>Email automation (5k contacts/mo)</li>
+            <li><span class="fck">✓</span>Basic analytics dashboard</li>
+            <li><span class="fck">✓</span>3 API integrations</li>
+            <li><span class="fck">✓</span>Email support — 48h response</li>
+            <li class="pc-na"><span class="fcx">✕</span>AI Agents</li>
+            <li class="pc-na"><span class="fcx">✕</span>Document processing</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline w-full" id="cta-starter">Get Started Free →</a>
+        </div>
+
+        <!-- Growth (Featured) -->
+        <div class="price-card price-featured" id="plan-growth">
+          <div class="pc-popular">⚡ Most Popular</div>
+          <div class="pc-header">
+            <span class="plan-icon-e">🚀</span>
+            <h3>Growth</h3>
+            <p class="plan-tag">For scaling teams needing comprehensive AI</p>
+          </div>
+          <div class="pc-price">
+            <span class="pc-curr">$</span>
+            <span class="pc-amt" data-mo="3999" data-yr="3199">3,999</span>
+            <span class="pc-per">/mo</span>
+          </div>
+          <ul class="pc-features">
+            <li><span class="fck">✓</span>3 AI Chatbots (all platforms)</li>
+            <li><span class="fck">✓</span>Unlimited automated workflows</li>
+            <li><span class="fck">✓</span>Email automation (50k contacts/mo)</li>
+            <li><span class="fck">✓</span>Advanced AI analytics + reports</li>
+            <li><span class="fck">✓</span>Unlimited API integrations</li>
+            <li><span class="fck">✓</span>Priority support — 4h response</li>
+            <li><span class="fck">✓</span>1 Custom AI Agent</li>
+            <li><span class="fck">✓</span>Document processing (500 docs/mo)</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary w-full" id="cta-growth">Start Growing Now →</a>
+        </div>
+
+        <!-- Enterprise -->
+        <div class="price-card" id="plan-enterprise">
+          <div class="pc-header">
+            <span class="plan-icon-e">🏢</span>
+            <h3>Enterprise</h3>
+            <p class="plan-tag">For large organizations needing full-stack AI</p>
+          </div>
+          <div class="pc-price">
+            <span class="pc-custom">Custom</span>
+            <span class="pc-per">pricing</span>
+          </div>
+          <ul class="pc-features">
+            <li><span class="fck">✓</span>Unlimited AI Chatbots</li>
+            <li><span class="fck">✓</span>Unlimited workflows & agents</li>
+            <li><span class="fck">✓</span>Custom AI model fine-tuning</li>
+            <li><span class="fck">✓</span>On-premise deployment option</li>
+            <li><span class="fck">✓</span>Dedicated account manager</li>
+            <li><span class="fck">✓</span>24/7 SLA-backed support</li>
+            <li><span class="fck">✓</span>Unlimited document processing</li>
+            <li><span class="fck">✓</span>Private AI infrastructure</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline w-full" id="cta-enterprise">Talk to Sales →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ TESTIMONIALS ═══════════════ -->
+  <section class="testimonials" id="testimonials" aria-labelledby="test-h">
+    <div class="container">
+      <header class="section-header">
+        <span class="section-tag">Real Results</span>
+        <h2 class="section-title" id="test-h">What Our Clients <span class="tg">Actually Say</span></h2>
+      </header>
+
+      <div class="testi-grid">
+
+        <div class="testi-card" id="t1">
+          <div class="testi-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote>"NorthPeak Digital automated our entire invoice processing pipeline. We went from 3 employees spending 6 hours/day on data entry to zero — all handled by their AI in real-time. The ROI was instant and undeniable."</blockquote>
+          <div class="testi-author">
+            <div class="testi-avatar" aria-hidden="true">SA</div>
+            <div><strong>Sarah Anderson</strong><span>CFO, Meridian Logistics Group</span></div>
+          </div>
+          <div class="testi-badge">💡 Saved 18 hrs/day</div>
+        </div>
+
+        <div class="testi-card testi-featured" id="t2">
+          <div class="testi-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote>"Our WhatsApp chatbot handles 94% of customer queries without any human intervention. Customer satisfaction actually went UP. We scaled support without hiring a single additional person."</blockquote>
+          <div class="testi-author">
+            <div class="testi-avatar" aria-hidden="true">MK</div>
+            <div><strong>Marcus Kim</strong><span>CEO, ShopEase E-commerce</span></div>
+          </div>
+          <div class="testi-badge">💡 94% tickets auto-resolved</div>
+        </div>
+
+        <div class="testi-card" id="t3">
+          <div class="testi-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <blockquote>"The AI agent they built does competitor research, writes strategy reports, and updates our CRM. Tasks that used to take my team a full week now happen overnight — automatically."</blockquote>
+          <div class="testi-author">
+            <div class="testi-avatar" aria-hidden="true">PV</div>
+            <div><strong>Priya Venkat</strong><span>Head of Strategy, NovaTech SaaS</span></div>
+          </div>
+          <div class="testi-badge">💡 40 hrs/week reclaimed</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ ROI CALCULATOR ═══════════════ -->
+  <section class="roi-calc" id="roi-calculator" aria-labelledby="roi-h">
+    <div class="container">
+      <header class="section-header">
+        <span class="section-tag">💡 Savings Calculator</span>
+        <h2 class="section-title" id="roi-h">See How Much You Could <span class="tg">Save</span></h2>
+        <p class="section-sub">Answer 3 simple questions below. We'll instantly show you how much time and money AI automation could save your team.</p>
+      </header>
+
+      <div class="roi-wrapper">
+        <div class="roi-inputs">
+
+          <div class="roi-field">
+            <label for="ri-team">
+              <span class="roi-question">❶ How many people are on your team?</span>
+              <span class="roi-val-display" id="ri-team-d">10 people</span>
+            </label>
+            <input type="range" id="ri-team" min="1" max="200" value="10" class="roi-slider" aria-label="Team size: 10 people" />
+            <div class="roi-range-labels"><span>1 person</span><span>200 people</span></div>
+            <p class="roi-helper">Count everyone who does repetitive tasks — data entry, emails, report writing, etc.</p>
+          </div>
+
+          <div class="roi-field">
+            <label for="ri-hours">
+              <span class="roi-question">❷ How many hours per week does each person spend on repetitive work?</span>
+              <span class="roi-val-display" id="ri-hours-d">10 hrs</span>
+            </label>
+            <input type="range" id="ri-hours" min="1" max="40" value="10" class="roi-slider" aria-label="Manual hours per person per week: 10" />
+            <div class="roi-range-labels"><span>1 hr/week</span><span>40 hrs/week</span></div>
+            <p class="roi-helper">Think: copy-pasting data, sending follow-up emails, creating reports, manual invoicing.</p>
+          </div>
+
+          <div class="roi-field">
+            <label for="ri-rate">
+              <span class="roi-question">❸ What's the average hourly cost per employee?</span>
+              <span class="roi-val-display" id="ri-rate-d">$50/hr</span>
+            </label>
+            <input type="range" id="ri-rate" min="15" max="250" value="50" class="roi-slider" aria-label="Average hourly rate: $50" />
+            <div class="roi-range-labels"><span>$15/hr</span><span>$250/hr</span></div>
+            <p class="roi-helper">Include salary + benefits. Not sure? $50/hr is a reasonable average for most teams.</p>
+          </div>
+
+          <div class="roi-how-it-works">
+            <p class="roi-formula-label">📐 How we calculate this:</p>
+            <p class="roi-formula"><span id="ri-team-v">10</span> people × <span id="ri-hours-v">10</span> hrs/week × 4.3 weeks × 70% automatable = <strong><span id="ri-total-hrs">301</span> hrs/month saved</strong></p>
+            <p class="roi-footnote">* We assume AI can automate 70% of repetitive tasks — a conservative industry average.</p>
+          </div>
+
+        </div>
+
+        <div class="roi-results" aria-live="polite">
+          <h3 class="roi-results-title">Your Estimated Savings</h3>
+          <div class="roi-res-cards">
+            <div class="roi-res-card">
+              <div class="rrc-icon">⏱️</div>
+              <div class="rrc-val" id="rr-hours">0</div>
+              <div class="rrc-label">Hours your team gets back <strong>every month</strong></div>
+            </div>
+            <div class="roi-res-card roi-res-main">
+              <div class="rrc-icon">💰</div>
+              <div class="rrc-val" id="rr-money">$0</div>
+              <div class="rrc-label">Money saved <strong>per year</strong></div>
+            </div>
+            <div class="roi-res-card">
+              <div class="rrc-icon">📈</div>
+              <div class="rrc-val" id="rr-roi">0%</div>
+              <div class="rrc-label">Boost in team <strong>productivity</strong></div>
+            </div>
+          </div>
+          <p class="roi-results-note">💡 That's like adding <strong><span id="rr-fte">0</span> full-time employees</strong> to your team — without hiring anyone.</p>
+        </div>
+      </div>
+
+      <div class="roi-cta-wrap">
+        <p>These are conservative estimates. Real results are often 20–40% higher.</p>
+        <a href="#contact" class="btn btn-primary" id="roi-cta-btn">Get Your Free Custom Savings Report →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CONTACT FORM ═══════════════ -->
+  <section class="contact" id="contact" aria-labelledby="ctc-h">
+    <div class="container contact-wrap">
+
+      <div class="contact-info">
+        <span class="section-tag">Get in Touch</span>
+        <h2 class="section-title" id="ctc-h">Let's Build Your <span class="tg">AI Solution</span></h2>
+        <p class="section-sub">Tell us about your business and we'll design a custom automation strategy within 48 hours — no obligation, no sales pressure.</p>
+
+        <div class="ctc-details">
+          <div class="ctc-item"><span>📧</span><div><strong>Email</strong><span>hello@northpeakdigital.com</span></div></div>
+          <div class="ctc-item"><span>💬</span><div><strong>WhatsApp</strong><span>+1 (888) NORTHPK</span></div></div>
+          <div class="ctc-item"><span>⏱️</span><div><strong>Response Time</strong><span>Under 4 business hours</span></div></div>
+        </div>
+
+        <div class="trust-badges">
+          <span class="trust-badge">🔒 SOC2 Compliant</span>
+          <span class="trust-badge">🌍 GDPR Ready</span>
+          <span class="trust-badge">⭐ 4.9/5 Client Rating</span>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contact-form" novalidate aria-label="Contact request form">
+
+        <div class="form-row">
+          <div class="form-grp" id="fg-name">
+            <label for="cf-name">Full Name <abbr title="required">*</abbr></label>
+            <input type="text" id="cf-name" name="name" placeholder="Jane Smith" autocomplete="name" required aria-required="true" aria-describedby="e-name" />
+            <span class="f-err" id="e-name" role="alert"></span>
+            <span class="f-ok" aria-hidden="true">✓</span>
+          </div>
+          <div class="form-grp" id="fg-company">
+            <label for="cf-company">Company Name</label>
+            <input type="text" id="cf-company" name="company" placeholder="Acme Corp" autocomplete="organization" />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-grp" id="fg-email">
+            <label for="cf-email">Work Email <abbr title="required">*</abbr></label>
+            <input type="email" id="cf-email" name="email" placeholder="jane@acme.com" autocomplete="email" required aria-required="true" aria-describedby="e-email" />
+            <span class="f-err" id="e-email" role="alert"></span>
+            <span class="f-ok" aria-hidden="true">✓</span>
+          </div>
+          <div class="form-grp" id="fg-phone">
+            <label for="cf-phone">Phone (optional)</label>
+            <input type="tel" id="cf-phone" name="phone" placeholder="+1 (555) 000-0000" autocomplete="tel" />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-grp" id="fg-service">
+            <label for="cf-service">Service Interested In <abbr title="required">*</abbr></label>
+            <select id="cf-service" name="service" required aria-required="true" aria-describedby="e-service">
+              <option value="">Select a service...</option>
+              <option value="chatbot">AI Chatbots</option>
+              <option value="workflow">Workflow Automation</option>
+              <option value="agents">AI Agents</option>
+              <option value="email">Email Automation</option>
+              <option value="docs">Document Processing</option>
+              <option value="analytics">AI Analytics</option>
+              <option value="multiple">Multiple / Custom Package</option>
+            </select>
+            <span class="f-err" id="e-service" role="alert"></span>
+            <span class="f-ok" aria-hidden="true">✓</span>
+          </div>
+          <div class="form-grp" id="fg-budget">
+            <label for="cf-budget">Monthly Budget</label>
+            <select id="cf-budget" name="budget">
+              <option value="">Select range...</option>
+              <option value="starter">$1,000 – $2,000 / mo</option>
+              <option value="growth">$2,000 – $5,000 / mo</option>
+              <option value="scale">$5,000 – $15,000 / mo</option>
+              <option value="enterprise">$15,000+ / mo</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-grp" id="fg-message">
+          <label for="cf-message">
+            Describe Your Challenge <abbr title="required">*</abbr>
+            <span class="char-counter"><span id="cf-count">0</span>/500</span>
+          </label>
+          <textarea id="cf-message" name="message" rows="5" placeholder="Tell us about the manual processes you want to automate, tools you currently use, and your main business goals..." maxlength="500" required aria-required="true" aria-describedby="e-message"></textarea>
+          <span class="f-err" id="e-message" role="alert"></span>
+          <span class="f-ok" aria-hidden="true">✓</span>
+        </div>
+
+        <div class="form-grp form-check" id="fg-consent">
+          <label class="check-label" for="cf-consent">
+            <input type="checkbox" id="cf-consent" name="consent" required aria-required="true" aria-describedby="e-consent" />
+            <span class="check-box" aria-hidden="true"></span>
+            I agree to be contacted about my automation inquiry <abbr title="required">*</abbr>
+          </label>
+          <span class="f-err" id="e-consent" role="alert"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-full" id="submit-btn" aria-label="Submit automation request">
+          <span class="btn-txt">Send My Automation Request 🚀</span>
+          <span class="btn-spin" aria-hidden="true"></span>
+        </button>
+
+        <div class="form-success" id="form-success" hidden role="alert" aria-live="assertive">
+          <span aria-hidden="true">🎉</span>
+          <div>
+            <strong>Request received!</strong>
+            <p>Our team will design a custom automation strategy and reach out within 4 business hours.</p>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </section>
+
+  <!-- ═══════════════ FLOATING AI CHAT DEMO ═══════════════ -->
+  <div class="chat-bubble-wrap" id="chat-wrap">
+    <div class="chat-popup" id="chat-popup" aria-label="AI Chat Demo" role="dialog" aria-modal="true" hidden>
+      <div class="cp-header">
+        <div class="cp-agent">
+          <div class="cp-avatar">🤖</div>
+          <div><strong>NorthPeak Bot</strong><span class="cp-status">● Online</span></div>
+        </div>
+        <button class="cp-close" id="cp-close" aria-label="Close chat demo">✕</button>
+      </div>
+      <div class="cp-messages" id="cp-messages">
+        <div class="cp-msg bot">
+          <p>👋 Hi! I'm NorthPeak's demo AI. Ask me anything about automation for your business!</p>
+        </div>
+      </div>
+      <div class="cp-input-row">
+        <input type="text" id="cp-input" placeholder="Ask about AI automation..." aria-label="Chat input" />
+        <button class="cp-send" id="cp-send" aria-label="Send">→</button>
+      </div>
+    </div>
+    <button class="chat-fab" id="chat-fab" aria-label="Open AI chat demo" aria-expanded="false">
+      <span class="fab-emoji">🤖</span>
+      <span class="fab-label">Try AI Chat</span>
+      <span class="fab-ring"></span>
+    </button>
+  </div>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-text footer-logo">NorthPeak<span class="brand-ai">Digital</span></span>
+        <p>AI Automation & Intelligent Business Solutions.<br/>Automate repetitive work. Focus on growth.</p>
+        <div class="footer-social" aria-label="Social links">
+          <a href="#" aria-label="LinkedIn" class="soc-link">in</a>
+          <a href="#" aria-label="Twitter/X" class="soc-link">𝕏</a>
+          <a href="#" aria-label="GitHub" class="soc-link">⌥</a>
+        </div>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">AI Chatbots</a></li>
+            <li><a href="#services">Workflow Automation</a></li>
+            <li><a href="#services">AI Agents</a></li>
+            <li><a href="#services">Email Automation</a></li>
+            <li><a href="#services">Document Processing</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#industries">Industries</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#testimonials">Case Studies</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Documentation</a></li>
+            <li><a href="#">API Reference</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Status</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2025 NorthPeak Digital. All rights reserved. Built with pure HTML/CSS/JS — zero page builders, zero WordPress.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
