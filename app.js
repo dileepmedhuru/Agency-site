@@ -366,10 +366,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         [teamInput, hoursInput, rateInput].forEach(updateSliderFill);
 
-        // Calculate: hoursPerMonth = team * hours * 4.33 * 0.7 (70% automation)
-        const hoursPerMonth = Math.round(team * hours * 4.33 * 0.7);
+        // Calculate: hoursPerMonth = team * hours * 4.33 * 0.8 (80% automation)
+        const hoursPerMonth = Math.round(team * hours * 4.33 * 0.8);
         const moneySaved = Math.round(hoursPerMonth * rate * 12); // yearly
-        const productivityGain = 70; // Based on assumption (70% automation of the manual portion)
+        const productivityGain = 80; // Based on assumption (80% automation of the manual portion)
         const fteEquiv = (hoursPerMonth / 173.3).toFixed(1); // 173.3 hours per month for a full-time worker
 
         if (totalHrsSpan) totalHrsSpan.textContent = hoursPerMonth.toLocaleString();
